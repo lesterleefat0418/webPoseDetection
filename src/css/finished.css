@@ -1,0 +1,83 @@
+.finishedWrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -100vh;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.5s ease, opacity 0.1s ease 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+.finishedWrapper.show {
+  top: 0px;
+  opacity: 1;
+  transition: top 0.5s ease, opacity 0.1s ease;
+  pointer-events: all;
+}
+/*-----------------------------------------------------------------------------------------------*/
+.finishedWrapper > .finishedBoardWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.finishedWrapper > .finishedBoardWrapper > .finishedBoard {
+  height: calc(min(90vh, 90vw));
+  content: url(../images/finishedNoPhoto.png);
+}
+
+.finishedWrapper > .finishedBoardWrapper > .finishedBtnWrapper {
+  position: absolute;
+  top: calc(50% + min(25vh, 25vw));
+  left: calc((100vw - min(70vh, 70vw))/2);
+  width: calc(min(70vh, 70vw));
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.finishedWrapper > .finishedBoardWrapper > .finishedBtnWrapper > .goConclusionBtn {
+  content: url(../images/goConclusionBgnYellow.png);
+  width: calc(min(28.7vh, 28.7vw));
+  cursor: pointer;
+}
+.finishedWrapper > .finishedBoardWrapper > .finishedBtnWrapper > .goConclusionBtn:active {
+  content: url(../images/goConclusionBtnGreen.png);
+}
+
+
+/*.finishedWrapper > .finishedBoardWrapper > .finishedBtnWrapper > .backHomeBtn {
+  content: url(../images/backHomeBtnYellow.png);
+  width: calc(min(28.7vh, 28.7vw));
+  cursor: pointer;
+}
+
+.finishedWrapper > .finishedBoardWrapper > .finishedBtnWrapper > .backHomeBtn:active {
+  content: url(../images/backHomeBtnGreen.png);
+}*/
+
+.finishedWrapper > .finishedBoardWrapper > .finishedBtnWrapper > .savePhotoBtn {
+  content: url(../images/savePhotoBtnYellow.png);
+  width: calc(min(28.7vh, 28.7vw));
+  display: none;
+  cursor: pointer;
+}
+
+.finishedWrapper > .finishedBoardWrapper > .finishedBtnWrapper > .savePhotoBtn:active {
+  content: url(../images/savePhotoBtnGreen.png);
+}
+/*-----------------------------------------------------------------------------------------------*/
+.finishedWrapper > .finishedBoardWrapper.withPhoto > .finishedBoard {
+  content: url(../images/finishedWithPhoto.png);
+}
+
+.finishedWrapper > .finishedBoardWrapper.withPhoto > .finishedBtnWrapper > .savePhotoBtn {
+  display: inline;
+} 
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/

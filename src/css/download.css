@@ -1,0 +1,109 @@
+.downloadWrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -100vh;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.5s ease, opacity 0.1s ease 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+.downloadWrapper.show {
+  top: 0px;
+  opacity: 1;
+  transition: top 0.5s ease, opacity 0.1s ease;
+  pointer-events: all;
+}
+/*-----------------------------------------------------------------------------------------------*/
+.downloadWrapper > .downloadBoard {
+  background-image: url(../images/downloadBoard.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: calc(min(90vh, 90vw));
+  height: calc(min(90vh, 90vw));
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.downloadWrapper > .downloadBoard > .displayWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: calc(min(28vh, 21vw));
+  padding-left: calc(min(5vh, 5vw));
+  padding-right: calc(min(5vh, 5vw));
+  width: 100%;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}
+
+.downloadWrapper > .downloadBoard > .displayWrapper > .display {
+  width: calc(6.4 * min(7.5vh, 7.5vw));
+  height: calc(4.8 * min(7.5vh, 7.5vw));
+  background-color: #FFF;
+  border-radius: 10px;
+  content: '';
+}
+.downloadWrapper > .downloadBoard > .displayWrapper > .leftBtn {
+  height: calc(min(7vh, 7vw));
+  content: url(../images/leftBtnLight.png);
+  cursor: pointer;
+}
+.downloadWrapper > .downloadBoard > .displayWrapper > .leftBtn:active {
+  content: url(../images/leftBtnDark.png);
+}
+.downloadWrapper > .downloadBoard > .displayWrapper > .rightBtn {
+  height: calc(min(7vh, 7vw));
+  content: url(../images/rightBtnLight.png);
+  cursor: pointer;
+}
+.downloadWrapper > .downloadBoard > .displayWrapper > .rightBtn:active {
+  content: url(../images/rightBtnDark.png);
+}
+/*-----------------------------------------------------------------------------------------------*/
+.downloadWrapper > .downloadBoard  > .downloadBtnWrapper {
+  width: calc(min(70vh, 70vw));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: calc(min(1vh, 1vw));
+}
+
+.downloadWrapper > .downloadBoard  > .downloadBtnWrapper > .goConclusionBtn {
+  content: url(../images/goConclusionBgnYellow.png);
+  width: calc(min(28.7vh, 28.7vw));
+  cursor: pointer;
+}
+.downloadWrapper > .downloadBoard  > .downloadBtnWrapper > .goConclusionBtn:active {
+  content: url(../images/goConclusionBtnGreen.png);
+}
+
+/*.downloadWrapper > .downloadBoard  > .downloadBtnWrapper > .backHomeBtn {
+  content: url(../images/backHomeBtnYellow.png);
+  width: calc(min(28.7vh, 28.7vw));
+  cursor: pointer;
+}
+
+.downloadWrapper > .downloadBoard  > .downloadBtnWrapper > .backHomeBtn:active {
+  content: url(../images/backHomeBtnGreen.png);
+}*/
+
+.downloadWrapper > .downloadBoard  > .downloadBtnWrapper > .saveBtn {
+  content: url(../images/saveBtnRed.png);
+  width: calc(min(28.7vh, 28.7vw));
+  margin-bottom: calc(min(1vh, 1vw));
+  cursor: pointer;
+
+}
+
+.downloadWrapper > .downloadBoard  > .downloadBtnWrapper > .saveBtn.downloaded {
+  content: url(../images/saveBtnGreen.png);
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/

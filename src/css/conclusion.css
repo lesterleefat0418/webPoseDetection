@@ -1,0 +1,140 @@
+.conclusionWrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -100vh;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.5s ease, opacity 0.1s ease 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+.conclusionWrapper.show {
+  top: 0px;
+  opacity: 1;
+  transition: top 0.5s ease, opacity 0.1s ease;
+  pointer-events: all;
+}
+/*-----------------------------------------------------------------------------------------------*/
+.conclusionWrapper > .conclusionBoard {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: calc(min(90vh, 90vw));
+  height: calc(min(90vh, 90vw));
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.conclusionWrapper > .conclusionBoard {
+  background-image: url(../images/conclusionBoard.png);
+}
+
+.conclusionWrapper > .conclusionBoard > .contentWrapper {
+  position: absolute;
+  top: calc(min(16vh, 16vw));
+  height: calc(min(64vh, 64vw));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.conclusionWrapper > .conclusionBoard > .mediaWrapper {
+  position: absolute;
+  top: calc(min(16vh, 16vw));
+  /*width: calc(min(83.25vh, 83.257vw));
+  height: calc(min(46.83vh, 46.83vw));*/
+  width: calc(min(74.93vh, 74.93vw));
+  height: calc(min(42.14vh, 42.14vw));
+  display: flex;
+  justify-content: center;
+}
+.conclusionWrapper > .conclusionBoard > .textWrapper {
+  position: absolute;
+  top: calc(min(16vh, 16vw));
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/*.conclusionWrapper > .conclusionBoard.page1 > .contentWrapper > .media {
+  content: url(../images/conclusionMedia/1.png);
+}
+
+.conclusionWrapper > .conclusionBoard.page2 > .contentWrapper > .media {
+  content: url(../images/conclusionMedia/1.png);
+}
+.conclusionWrapper > .conclusionBoard > .contentWrapper > .media02 {
+  content: url(../images/conclusionMedia/6_720p.mp4);
+}*/
+/*-----------------------------------------------------------------------------------------------*/
+/*.conclusionWrapper > .conclusionBoard > .playConclusionBtn {
+  content: url(../images/playBtn.png);
+  width: calc(min(7vh, 7vw));
+  cursor: pointer;
+  position: absolute;
+  top: calc(min(60.5vh, 60.5vw));
+  right: calc(min(5vh, 5vw));
+  display: none;
+}
+.conclusionWrapper > .conclusionBoard > .playConclusionBtn.show {
+  display: block;
+}*/
+/*-----------------------------------------------------------------------------------------------*/
+.conclusionWrapper > .conclusionBoard > .btnWrapper {
+  width: 90%;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: calc(min(1vh, 1vw));
+  position: absolute;
+  bottom: calc(min(11vh, 11vw));
+  display: flex;
+}
+
+.conclusionWrapper > .conclusionBoard  > .btnWrapper > .goNextBtn {
+  display: flex;
+  content: url(../images/goNextBtnYellow.png);
+  width: calc(min(24vh, 24vw));
+  cursor: pointer;
+}
+.conclusionWrapper > .conclusionBoard  > .btnWrapper > .goNextBtn:active {
+  content: url(../images/goNextBtnGreen.png);
+}
+
+.conclusionWrapper > .conclusionBoard  > .btnWrapper > .goPreviousBtn {
+  display: flex;
+  content: url(../images/goPreviousBtnYellow.png);
+  width: calc(min(24vh, 24vw));
+  cursor: pointer;
+}
+.conclusionWrapper > .conclusionBoard  > .btnWrapper > .goPreviousBtn:active {
+  content: url(../images/goPreviousBtnGreen.png);
+}
+
+.conclusionWrapper > .conclusionBoard  > .btnWrapper > .playAgainBtn {
+  display: flex;
+  content: url(../images/playAgainBtnYellow.png);
+  width: calc(min(24vh, 24vw));
+  cursor: pointer;
+}
+.conclusionWrapper > .conclusionBoard  > .btnWrapper > .playAgainBtn:active {
+  content: url(../images/playAgainBtnGreen.png);
+}
+
+.conclusionWrapper > .conclusionBoard  > .btnWrapper > .backHomeBtn {
+  display: flex;
+  content: url(../images/backHomeBtnYellow.png);
+  width: calc(min(24vh, 24vw));
+  cursor: pointer;
+}
+.conclusionWrapper > .conclusionBoard  > .btnWrapper > .backHomeBtn:active {
+  content: url(../images/backHomeBtnGreen.png);
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/

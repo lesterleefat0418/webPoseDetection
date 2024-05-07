@@ -1,0 +1,173 @@
+
+.gameWrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -100vh;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.5s ease;
+}
+/*-----------------------------------------------------------------------------------------------*/
+.gameWrapper > .prepareBoardWrapper {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.gameWrapper > .prepareBoardWrapper > .prepareBoard {
+  content: url(../images/prepareBoard.png);
+  height: calc(min(53.0vh, 53.0vw));
+  /*position: absolute;
+  top: calc(min(2vh, 2vw));*/
+}
+/*-----------------------------------------------------------------------------------------------*/
+.gameWrapper > .outBoxBoardWrapper {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.gameWrapper > .outBoxBoardWrapper > .outBoxBoard {
+  content: url(../images/outBox.png);
+  height: calc(min(40vh, 40vw));
+}
+/*-----------------------------------------------------------------------------------------------*/
+.gameWrapper > .topRightControl {
+  position: absolute;
+  top: calc(min(1vh, 2vw));
+  right: 0px;
+  justify-content: space-evenly;
+  display: flex;
+  align-items: baseline;
+}
+
+.gameWrapper > .topRightControl > .tips {
+  width: calc(min(50vh, 50vw));
+  transition: all 0.5s ease;
+  opacity: 1;
+  margin-right: calc(min(5vh, 5vw));
+}
+.gameWrapper > .topRightControl > .tips.hide { opacity: 0; }
+.gameWrapper > .topRightControl > .tips.tipsFace { content: url(../images/tipsFace.png); }
+.gameWrapper > .topRightControl > .tips.tipsHand { content: url(../images/tipsHand.png); }
+.gameWrapper > .topRightControl > .tips.tipsOutBox { content: url(../images/tipsOutBox.png); }
+.gameWrapper > .topRightControl > .tips.tipsReady { content: url(../images/tipsReady.png); }
+.gameWrapper > .topRightControl > .tips.tipsSit { content: url(../images/tipsSit.png); }
+.gameWrapper > .topRightControl > .tips.tipsStart { content: url(../images/tipsStart.png); }
+
+.gameWrapper > .topRightControl > .musicBtn {
+  content: url(../images/musicBtn.png);
+  width: calc(min(9vh, 9vw));
+  margin-right: calc(min(5vh, 5vw));
+  cursor: pointer;
+}
+.gameWrapper > .topRightControl > .switchCamBtn {
+  content: url(../images/switchCamBtn.png);
+  width: calc(min(9vh, 9vw));
+  margin-right: calc(min(5vh, 5vw));
+  cursor: pointer;
+}
+.gameWrapper > .topRightControl > .switchCamBtn:active {
+  width: calc(min(7vh, 7vw));
+  padding: calc(min(1vh, 1vw));
+}
+.gameWrapper > .topRightControl > .exitBtn {
+  content: url(../images/exitBtn.png);
+  width: calc(min(9vh, 9vw));
+  margin-right: calc(min(5vh, 5vw));
+  cursor: pointer;
+}
+.gameWrapper > .topRightControl > .exitBtn:active {
+  width: calc(min(7vh, 7vw));
+  padding: calc(min(1vh, 1vw));
+}
+/*-----------------------------------------------------------------------------------------------*/
+.gameWrapper > .count {
+  max-height: calc(min(20vh, 20vw));
+  transition: all 0.4s ease;
+}
+.gameWrapper > .count.c0 {
+  content: url(../images/count0.png);
+}
+.gameWrapper > .count.c1 {
+  content: url(../images/count1.png);
+}
+.gameWrapper > .count.c2 {
+  content: url(../images/count2.png);
+}
+.gameWrapper > .count.c3 {
+  content: url(../images/count3.png);
+}
+/*.gameWrapper > .countWrapper {
+  height: 50%;
+  width: 50%;
+}
+.gameWrapper .count0, .gameWrapper .count1, .gameWrapper .count2, .gameWrapper .count3 {
+  max-width: 100%;
+  max-height: 100%;
+  display: none;
+  opacity: 0;
+}
+.gameWrapper .count0 {
+  content: url(../images/count0.png);
+}
+.gameWrapper .count1 {
+  content: url(../images/count1.png);
+}
+.gameWrapper .count2 {
+  content: url(../images/count2.png);
+}
+.gameWrapper .count3 {
+  content: url(../images/count3.png);
+}*/
+/*-----------------------------------------------------------------------------------------------*/
+.gameWrapper > .flagWrapper {
+  /*visibility: hidden;*/
+  display: none;
+
+}
+
+.gameWrapper > .flagWrapper > .pole {
+  /*content: url(../images/pole.png);*/
+
+}
+.gameWrapper > .flagWrapper > .flag {
+  /*content: url(../images/flag.png);*/
+  
+}
+/*-----------------------------------------------------------------------------------------------*/
+.gameWrapper > .capBtn {
+  position: absolute;
+  width: calc(min(17.5vh, 17.5vw));
+  bottom: calc(min(2vh, 2vw));
+  right: calc(min(6vh, 6vw));
+  cursor: pointer;
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.5s ease;
+  content: url(../images/capBtnYellow.png);
+}
+.gameWrapper > .capBtn.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+.gameWrapper > .capBtn.captured {
+  content: url(../images/capBtnGreen.png);
+  pointer-events: none;
+}
+/*-----------------------------------------------------------------------------------------------*/

@@ -1,48 +1,118 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>PoseNet Example</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.js"></script>
-        <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+<head>
+  <title>升國旗</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/loadingBar.css">
+  <link rel="stylesheet" href="src/css/instruction.css">
+  <link rel="stylesheet" href="src/css/canvas.css">
+  <link rel="stylesheet" href="src/css/game.css">
+  <link rel="stylesheet" href="src/css/exit.css">
+  <link rel="stylesheet" href="src/css/finished.css">
+  <link rel="stylesheet" href="src/css/download.css">
+  <link rel="stylesheet" href="src/css/conclusion.css">
+</head>
+<body>
+  <div class="loadingBarWrapper">
+    <img class="loadingText"></img>
+    <div id="loadingBar" class="loadingBar">
+      <div class="brownBar"></div>
+      <div class="greenBar" id="greenBar"></div>
+      <div class="outterBorder"></div>
+      <div class="innerBorder"></div>
+    </div>
+</div>
 
-        <style>
+  <div class="canvasWrapper">
+    <canvas></canvas>
+    <video id="video" playsinline style="
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      visibility: hidden;
+      display: none;
+      ">
+    </video>
+  </div>
+  
+  <div class="instructionWrapper">
+    <img class="schoolLogo"></img>
+    <div class="gameTitle"></div>
+    <div class="instructionBoard"></div>
+    <img class="startBtn"></img>
+  </div>
 
-            body {
-                margin:0;
-            }
+  <div class="gameWrapper">
+    <div class="prepareBoardWrapper"><img class="prepareBoard"></img></div>
+    <!--<div class="outBoxBoardWrapper"><img class="outBoxBoard"></img></div>-->
+    <div class="topRightControl">
+      <img class="tips hide"></img>
+      <!--<img class="musicBtn"></img>-->
+      <img class="switchCamBtn"></img>
+      <img class="exitBtn"></img>
+    </div>
+    <img class="count"></img>
+    <div class="flagWrapper">
+      <img class="pole" src="./src/images/pole.png"></img>
+      <img class="flag" src="./src/images/flag.png"></img>
+      <img class="redCross" src="./src/images/redCross.png"></img>
+    </div>
+    <img class="capBtn hide"></img>
+  </div>
 
-            p {
-                position: absolute;
-                top: 10vh;
-                text-align: center;
-                width: 100%;
-                font-family: sans-serif;
-            }
+  <div class="exitWrapper">
+    <div class="exitBoard">
+      <div class="btnWrapper">
+        <img class="continueBtn"></img>
+        <img class="backHomeBtn"></img>
+      </div>
+    </div>
+  </div>
 
-            main {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;  
-                height: 100vh;
-            }
+  <div class="finishedWrapper">
+    <div class="finishedBoardWrapper">
+      <img class="finishedBoard"></img>
+      <div class="finishedBtnWrapper">
+        <img class="savePhotoBtn"></img>
+        <img class="goConclusionBtn"></img>
+        <!--<img class="backHomeBtn"></img>-->
+      </div>
+    </div>
+  </div>
 
-            canvas {
-                margin: auto;
-            }
+  <div class="downloadWrapper">
+    <div class="downloadBoard page1">
+      <div class="displayWrapper">
+        <img class="leftBtn"></img>
+        <img class="display"></img>
+        <img class="rightBtn"></img>
+      </div>
+      <div class="downloadBtnWrapper">
+        <img class="saveBtn"></img>
+        <img class="goConclusionBtn"></img>
+        <!--<img class="backHomeBtn"></img>-->
+      </div>
+    </div>
+  </div>
+  
+  <div class="conclusionWrapper">
+    <div class="conclusionBoard page1">
+      <div class="mediaWrapper"></div>
+      <div class="textWrapper"></div>
 
-        </style>
+      <!--<img class="playConclusionBtn">-->
+      <div class="btnWrapper">
+        <img class="goPreviousBtn" style="cursor: pointer;"></img>
+        <img class="goNextBtn" style="cursor: pointer;"></img>
+        <img class="playAgainBtn" style="cursor: pointer;"></img>
+        <img class="backHomeBtn" style="cursor: pointer;"></img>
+      </div>
+    </div>
+  </div>
 
-    </head>
-
-    <body>
-        <script src="js/Body.js"></script>
-        <script src="js/Ball.js"></script>
-        <script src="js/Hand.js"></script>
-        <script src="js/sketch.js"></script>
-
-        <p>Try to bounce the ball from one hand to another.</p>
-    </body>
+  <div class="version">Ver:1.9</div>
+</body>
+<script src="src/index.js"></script>
 
 </html>
